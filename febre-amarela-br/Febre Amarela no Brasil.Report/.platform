@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Febre Amarela no Brasil"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "96bfb9ae-2072-4d6f-bba5-706b449bbb7d"
+  }
+}
