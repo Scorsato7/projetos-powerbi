@@ -10,123 +10,123 @@ table fa_casoshumanos_1994-2025
 
 		annotation SummarizationSetBy = Automatic
 
-	column MACRORREG_LPI
+	column 'Região Sigla'
 		dataType: string
 		lineageTag: e7170d0c-0d49-475a-9d49-bbc501a32202
 		summarizeBy: none
-		sourceColumn: MACRORREG_LPI
+		sourceColumn: Região Sigla
 
 		annotation SummarizationSetBy = Automatic
 
-	column COD_UF_LPI
+	column 'Código UF'
 		dataType: int64
 		formatString: 0
 		lineageTag: c75a496d-7479-40cb-9013-34857f1630ca
 		summarizeBy: sum
-		sourceColumn: COD_UF_LPI
+		sourceColumn: Código UF
 
 		annotation SummarizationSetBy = Automatic
 
-	column UF_LPI
+	column UF
 		dataType: string
 		lineageTag: cbaefad5-aa74-49ba-8f17-3fec455a9d42
 		summarizeBy: none
-		sourceColumn: UF_LPI
+		sourceColumn: UF
 
 		annotation SummarizationSetBy = Automatic
 
-	column COD_MUN_LPI
+	column 'Código Município'
 		dataType: int64
 		formatString: 0
 		lineageTag: ada095c8-7ffd-4478-a134-d631cf927ca7
 		summarizeBy: sum
-		sourceColumn: COD_MUN_LPI
+		sourceColumn: Código Município
 
 		annotation SummarizationSetBy = Automatic
 
-	column MUN_LPI
+	column Município
 		dataType: string
 		lineageTag: 1a46ac00-aad8-492a-abd4-6595746b0d8a
 		summarizeBy: none
-		sourceColumn: MUN_LPI
+		sourceColumn: Município
 
 		annotation SummarizationSetBy = Automatic
 
-	column SEXO
+	column Sexo
 		dataType: string
 		lineageTag: e715eeb0-8919-489c-84c9-6d779fe26e1f
 		summarizeBy: none
-		sourceColumn: SEXO
+		sourceColumn: Sexo
 
 		annotation SummarizationSetBy = Automatic
 
-	column IDADE
+	column Idade
 		dataType: double
 		lineageTag: 9c36e8f2-48df-4185-9334-c47bb3146e92
 		summarizeBy: sum
-		sourceColumn: IDADE
+		sourceColumn: Idade
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column DT_IS
+	column 'Data Sintomas'
 		dataType: string
 		lineageTag: 74426ff5-8747-4dd4-a5c8-877ea469a0d6
 		summarizeBy: none
-		sourceColumn: DT_IS
+		sourceColumn: Data Sintomas
 
 		annotation SummarizationSetBy = Automatic
 
-	column SE_IS
+	column 'Semana Sintomas'
 		dataType: int64
 		formatString: 0
 		lineageTag: c3c1f993-1fb9-4126-b4a7-1fa229dfb42e
 		summarizeBy: sum
-		sourceColumn: SE_IS
+		sourceColumn: Semana Sintomas
 
 		annotation SummarizationSetBy = Automatic
 
-	column MES_IS
+	column 'Mês Sintomas'
 		dataType: int64
 		formatString: 0
 		lineageTag: 2e9ad697-8540-4c00-aabf-e2fcda095676
 		summarizeBy: sum
-		sourceColumn: MES_IS
+		sourceColumn: Mês Sintomas
 
 		annotation SummarizationSetBy = Automatic
 
-	column ANO_IS
+	column 'Ano Sintomas'
 		dataType: int64
 		formatString: 0
 		lineageTag: 3f26091d-ebf8-4d98-ab5a-b04e95ef7029
 		summarizeBy: sum
-		sourceColumn: ANO_IS
+		sourceColumn: Ano Sintomas
 
 		annotation SummarizationSetBy = Automatic
 
-	column MONITORAMENTO_IS
+	column 'Período Monitoria'
 		dataType: string
 		lineageTag: 3b707794-857d-41ec-8b64-659d455ff72d
 		summarizeBy: none
-		sourceColumn: MONITORAMENTO_IS
+		sourceColumn: Período Monitoria
 
 		annotation SummarizationSetBy = Automatic
 
-	column OBITO
+	column Óbito
 		dataType: string
 		lineageTag: fd39d72b-9c59-4912-819b-e238eec98855
 		summarizeBy: none
-		sourceColumn: OBITO
+		sourceColumn: Óbito
 
 		annotation SummarizationSetBy = Automatic
 
-	column DT_OBITO
+	column 'Data Óbito'
 		dataType: dateTime
 		formatString: Long Date
 		lineageTag: 6536f8df-87a6-426c-9cf4-c9b016e84c5f
 		summarizeBy: none
-		sourceColumn: DT_OBITO
+		sourceColumn: Data Óbito
 
 		variation Variation
 			isDefault
@@ -137,15 +137,51 @@ table fa_casoshumanos_1994-2025
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column Região
+		dataType: string
+		lineageTag: a5b69f79-5218-425e-932e-b4ad90d6dd75
+		summarizeBy: none
+		sourceColumn: Região
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UF Ajustada'
+		dataType: string
+		lineageTag: b0a47bad-1672-4414-a2c8-99aa956da6b0
+		summarizeBy: none
+		sourceColumn: UF Ajustada
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fa_casoshumanos_1994-2025 = m
 		mode: import
 		source =
 				let
 				    Fonte = Csv.Document(File.Contents("C:\Users\Thiago\OneDrive\Projetos PowerBI\projetos-powerbi\febre-amarela-br\fa_casoshumanos_1994-2025.csv"),[Delimiter=";", Columns=15, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID", Int64.Type}, {"MACRORREG_LPI", type text}, {"COD_UF_LPI", Int64.Type}, {"UF_LPI", type text}, {"COD_MUN_LPI", Int64.Type}, {"MUN_LPI", type text}, {"SEXO", type text}, {"IDADE", type number}, {"DT_IS", type text}, {"SE_IS", Int64.Type}, {"MES_IS", Int64.Type}, {"ANO_IS", Int64.Type}, {"MONITORAMENTO_IS", type text}, {"OBITO", type text}, {"DT_OBITO", type date}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID", Int64.Type}, {"MACRORREG_LPI", type text}, {"COD_UF_LPI", Int64.Type}, {"UF_LPI", type text}, {"COD_MUN_LPI", Int64.Type}, {"MUN_LPI", type text}, {"SEXO", type text}, {"IDADE", type number}, {"DT_IS", type text}, {"SE_IS", Int64.Type}, {"MES_IS", Int64.Type}, {"ANO_IS", Int64.Type}, {"MONITORAMENTO_IS", type text}, {"OBITO", type text}, {"DT_OBITO", type date}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"MACRORREG_LPI", "Região"}, {"COD_UF_LPI", "Código UF"}, {"UF_LPI", "UF"}, {"COD_MUN_LPI", "Código Município"}, {"MUN_LPI", "Município"}, {"SEXO", "Sexo"}, {"IDADE", "Idade"}, {"SE_IS", "Semana Sintomas"}, {"MES_IS", "Mês Sintomas"}, {"ANO_IS", "Ano Sintomas"}, {"MONITORAMENTO_IS", "Período Monitoria"}, {"OBITO", "Óbito"}, {"DT_OBITO", "Data Óbito"}, {"DT_IS", "Data Sintomas"}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Colunas Renomeadas", each true),
+				    #"Colunas Renomeadas1" = Table.RenameColumns(#"Linhas Filtradas",{{"Região", "Região Sigla"}}),
+				    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Colunas Renomeadas1", "Região", each if [Região Sigla] = "N" then "Norte" else if [Região Sigla] = "NE" then "Nordeste" else if [Região Sigla] = "CO" then "Centro-Oeste" else if [Região Sigla] = "SE" then "Sudeste" else if [Região Sigla] = "S" then "Sul" else null),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Coluna Condicional Adicionada",{"ID", "Região Sigla", "Região", "Código UF", "UF", "Código Município", "Município", "Sexo", "Idade", "Data Sintomas", "Semana Sintomas", "Mês Sintomas", "Ano Sintomas", "Período Monitoria", "Óbito", "Data Óbito"}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Colunas Reordenadas", each true),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Linhas Filtradas1", "UF Ajustada", each "Brasil - "&[UF]),
+				    #"Colunas Reordenadas1" = Table.ReorderColumns(#"Personalização Adicionada",{"ID", "Região Sigla", "Região", "Código UF", "UF", "UF Ajustada", "Código Município", "Município", "Sexo", "Idade", "Data Sintomas", "Semana Sintomas", "Mês Sintomas", "Ano Sintomas", "Período Monitoria", "Óbito", "Data Óbito"}),
+				    #"Colocar Cada Palavra Em Maiúscula" = Table.TransformColumns(#"Colunas Reordenadas1",{{"Município", Text.Proper, type text}}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Colocar Cada Palavra Em Maiúscula","IGN","NÃO",Replacer.ReplaceText,{"Óbito"}),
+				    #"Linhas Filtradas2" = Table.SelectRows(#"Valor Substituído", each true),
+				    #"Colocar Cada Palavra Em Maiúscula1" = Table.TransformColumns(#"Linhas Filtradas2",{{"Óbito", Text.Proper, type text}}),
+				    #"Linhas Filtradas3" = Table.SelectRows(#"Colocar Cada Palavra Em Maiúscula1", each true),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Linhas Filtradas3","M","Masculino",Replacer.ReplaceText,{"Sexo"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1","F","Feminino",Replacer.ReplaceText,{"Sexo"}),
+				    #"Linhas Filtradas4" = Table.SelectRows(#"Valor Substituído2", each true),
+				    #"Linhas Filtradas5" = Table.SelectRows(#"Linhas Filtradas4", each [Idade] <> null and [Idade] <> ""),
+				    #"Linhas Filtradas6" = Table.SelectRows(#"Linhas Filtradas5", each [Idade] <> null and [Idade] <> "")
 				in
-				    #"Tipo Alterado"
+				    #"Linhas Filtradas6"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
 

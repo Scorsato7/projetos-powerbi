@@ -110,7 +110,7 @@ table LocalDateTable_4a5b3025-b8ba-4b5b-b944-4fc7ebf1b3ae
 
 	partition LocalDateTable_4a5b3025-b8ba-4b5b-b944-4fc7ebf1b3ae = calculated
 		mode: import
-		source = Calendar(Date(Year(MIN('fa_casoshumanos_1994-2025'[DT_OBITO])), 1, 1), Date(Year(MAX('fa_casoshumanos_1994-2025'[DT_OBITO])), 12, 31))
+		source = Calendar(Date(Year(MIN('fa_casoshumanos_1994-2025'[Data Óbito])), 1, 1), Date(Year(MAX('fa_casoshumanos_1994-2025'[Data Óbito])), 12, 31))
 
 	annotation __PBI_LocalDateTable = true
 
