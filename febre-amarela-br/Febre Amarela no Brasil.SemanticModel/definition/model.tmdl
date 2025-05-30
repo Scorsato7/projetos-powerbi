@@ -17,6 +17,7 @@ annotation PBI_ProTooling = ["DevMode"]
 ref table fa_casoshumanos_1994-2025
 ref table DateTableTemplate_54ba8fc5-5d75-40ef-aa21-d9436738d41d
 ref table LocalDateTable_4a5b3025-b8ba-4b5b-b944-4fc7ebf1b3ae
+ref table Medidas
 
 ref cultureInfo pt-BR
 

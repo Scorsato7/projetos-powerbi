@@ -1,0 +1,32 @@
+table Medidas
+	lineageTag: dfce2c0b-4046-40d3-bb40-c60421edd30d
+
+	measure Óbitos = CALCULATE(COUNTROWS('fa_casoshumanos_1994-2025'), 'fa_casoshumanos_1994-2025'[Óbito] = "Sim")
+		formatString: 0
+		lineageTag: 42a2779a-c532-4b6a-807f-f679971fa5e2
+
+	measure Casos = COUNTROWS('fa_casoshumanos_1994-2025')
+		formatString: 0
+		lineageTag: 7e5293d2-a91f-432b-a95d-9ef318ada23b
+
+	measure Letalidade = DIVIDE([Óbitos], [Casos], 0)
+		formatString: 0%;-0%;0%
+		lineageTag: 044deb5f-b88a-4bf9-a3c8-5929c36c04b9
+
+	column Column
+		formatString: 0
+		lineageTag: 0e5a8e2c-3666-42fe-8e93-04b3601f5389
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 165dbd12c44c4f9abe595aa5a851b635
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

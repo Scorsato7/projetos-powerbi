@@ -20,12 +20,58 @@
   "sections": [
     {
       "config": "{}",
-      "displayName": "Página 1",
+      "displayName": "Visão Geral",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "3b7784eb814f680c7e86",
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"01cb61a96219102f4dec\",\"layouts\":[{\"id\":0,\"position\":{\"x\":30.236220472440944,\"y\":238.86614173228347,\"z\":3000,\"width\":836.5354330708661,\"height\":398.1102362204724,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fa_casoshumanos_1994-2025.Ano Sintomas\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.TotalCasos\"},{\"queryRef\":\"Medidas.TotalObitos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fa_casoshumanos_1994-2025\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Ano Sintomas\"},\"Name\":\"fa_casoshumanos_1994-2025.Ano Sintomas\",\"NativeReferenceName\":\"Ano Sintomas\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.TotalCasos\",\"NativeReferenceName\":\"Casos\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Óbitos\"},\"Name\":\"Medidas.TotalObitos\",\"NativeReferenceName\":\"Óbitos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Scalar'\"}}},\"logAxisScale\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"invertAxis\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Medidas.TotalCasos\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Medidas.TotalObitos\"}}],\"lineStyles\":[{\"properties\":{\"strokeLineJoin\":{\"expr\":{\"Literal\":{\"Value\":\"'miter'\"}}},\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'smooth'\"}}},\"interpolationStep\":{\"expr\":{\"Literal\":{\"Value\":\"'after'\"}}},\"interpolationSmooth\":{\"expr\":{\"Literal\":{\"Value\":\"'cardinal'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Casos x Óbitos por Ano'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 398.11,
+          "width": 836.54,
+          "x": 30.24,
+          "y": 238.87,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"0358f38382cbb39d320a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":896,\"y\":238.86614173228347,\"z\":4000,\"width\":374.92913385826773,\"height\":398,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"fa_casoshumanos_1994-2025.UF Ajustada\",\"active\":true}],\"Size\":[{\"queryRef\":\"Medidas.Casos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fa_casoshumanos_1994-2025\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"UF Ajustada\"},\"Name\":\"fa_casoshumanos_1994-2025.UF Ajustada\",\"NativeReferenceName\":\"UF Ajustada\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.Casos\",\"NativeReferenceName\":\"Casos\"}]},\"queryOptions\":{\"allowOverlappingPointsSample\":false},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapStyles\":[{\"properties\":{\"showLabels\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'grayscale'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}}}],\"bubbles\":[{\"properties\":{\"bubbleSize\":{\"expr\":{\"Literal\":{\"Value\":\"-7L\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"heatMap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"mapControls\":[{\"properties\":{\"autoZoom\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showZoomButtons\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showLassoButton\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"geocodingCulture\":{\"expr\":{\"Literal\":{\"Value\":\"'pt-BR'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Casos por Estado'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"lockAspect\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 398.00,
+          "width": 374.93,
+          "x": 896.00,
+          "y": 238.87,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"5f5ba3bf38d31fc97b97\",\"layouts\":[{\"id\":0,\"position\":{\"x\":508.9763779527559,\"y\":114.89763779527549,\"z\":2000,\"width\":179.4015748031496,\"height\":108.85039370078741,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Letalidade\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Letalidade\"},\"Name\":\"Medidas.Letalidade\",\"NativeReferenceName\":\"Letalidade\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Letalidade\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.85,
+          "width": 179.40,
+          "x": 508.98,
+          "y": 114.90,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"ea67c8d5409b07c57473\",\"layouts\":[{\"id\":0,\"position\":{\"x\":252.9763779527559,\"y\":114.89763779527549,\"z\":1000,\"width\":188.4724409448819,\"height\":108.85039370078741,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.TotalObitos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Óbitos\"},\"Name\":\"Medidas.TotalObitos\",\"NativeReferenceName\":\"Óbitos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Óbitos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 108.85,
+          "width": 188.47,
+          "x": 252.98,
+          "y": 114.90,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"fbd2d75cfe63fb9e2426\",\"layouts\":[{\"id\":0,\"position\":{\"x\":22.173228346456696,\"y\":114.89763779527549,\"z\":0,\"width\":201.5748031496063,\"height\":108.85039370078741,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.TotalCasos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.TotalCasos\",\"NativeReferenceName\":\"Casos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 108.85,
+          "width": 201.57,
+          "x": 22.17,
+          "y": 114.90,
+          "z": 0.00
+        }
+      ],
       "width": 1280.00
     }
   ]
