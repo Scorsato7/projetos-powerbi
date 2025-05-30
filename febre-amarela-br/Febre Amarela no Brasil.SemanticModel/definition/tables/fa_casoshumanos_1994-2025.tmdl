@@ -153,6 +153,14 @@ table fa_casoshumanos_1994-2025
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Faixa Estária'
+		dataType: string
+		lineageTag: a6a46720-f24a-4304-960c-ea0d612fa689
+		summarizeBy: none
+		sourceColumn: Faixa Estária
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fa_casoshumanos_1994-2025 = m
 		mode: import
 		source =
@@ -177,9 +185,10 @@ table fa_casoshumanos_1994-2025
 				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1","F","Feminino",Replacer.ReplaceText,{"Sexo"}),
 				    #"Linhas Filtradas4" = Table.SelectRows(#"Valor Substituído2", each true),
 				    #"Linhas Filtradas5" = Table.SelectRows(#"Linhas Filtradas4", each [Idade] <> null and [Idade] <> ""),
-				    #"Linhas Filtradas6" = Table.SelectRows(#"Linhas Filtradas5", each [Idade] <> null and [Idade] <> "")
+				    #"Linhas Filtradas6" = Table.SelectRows(#"Linhas Filtradas5", each [Idade] <> null and [Idade] <> ""),
+				    #"Coluna Condicional Adicionada1" = Table.AddColumn(#"Linhas Filtradas6", "Faixa Estária", each if [Idade] <= 12 then "Infantil" else if [Idade] <= 17 then "Adolescente" else if [Idade] <= 64 then "Adulto" else if [Idade] >= 65 then "Idoso" else null)
 				in
-				    #"Linhas Filtradas6"
+				    #"Coluna Condicional Adicionada1"
 
 	annotation PBI_ResultType = Table
 
