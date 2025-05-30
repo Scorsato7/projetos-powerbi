@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2},\"customTheme\":{\"name\":\"Storm\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -10,16 +10,50 @@
             "name": "CY24SU10",
             "path": "BaseThemes/CY24SU10.json",
             "type": 202
+          },
+          {
+            "name": "Storm",
+            "path": "BuiltInThemes/Storm.json",
+            "type": 201
           }
         ],
         "name": "SharedResources",
         "type": 2
       }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "fita-preta5953107837174954.png",
+            "path": "fita-preta5953107837174954.png",
+            "type": 100
+          },
+          {
+            "name": "logo-SUS1717922483880897.jpg",
+            "path": "logo-SUS1717922483880897.jpg",
+            "type": 100
+          },
+          {
+            "name": "seringa8788400758447031.png",
+            "path": "seringa8788400758447031.png",
+            "type": 100
+          },
+          {
+            "name": "virus5943668906781703.png",
+            "path": "virus5943668906781703.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
     }
   ],
   "sections": [
     {
-      "config": "{}",
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FDFFFF'\"}}}}}}}],\"outspace\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F8F7F7'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}",
       "displayName": "Visão Geral",
       "displayOption": 1,
       "filters": "[]",
@@ -27,70 +61,263 @@
       "name": "3b7784eb814f680c7e86",
       "visualContainers": [
         {
-          "config": "{\"name\":\"01cb61a96219102f4dec\",\"layouts\":[{\"id\":0,\"position\":{\"x\":22.670025188916874,\"y\":314.6599496221662,\"z\":3000,\"width\":836.977329974811,\"height\":382.67002518891684,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fa_casoshumanos_1994-2025.Ano Sintomas\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.TotalCasos\"},{\"queryRef\":\"Medidas.TotalObitos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fa_casoshumanos_1994-2025\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Ano Sintomas\"},\"Name\":\"fa_casoshumanos_1994-2025.Ano Sintomas\",\"NativeReferenceName\":\"Ano Sintomas\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.TotalCasos\",\"NativeReferenceName\":\"Casos\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Óbitos\"},\"Name\":\"Medidas.TotalObitos\",\"NativeReferenceName\":\"Óbitos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Scalar'\"}}},\"logAxisScale\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"invertAxis\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Medidas.TotalCasos\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Medidas.TotalObitos\"}}],\"lineStyles\":[{\"properties\":{\"strokeLineJoin\":{\"expr\":{\"Literal\":{\"Value\":\"'miter'\"}}},\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'smooth'\"}}},\"interpolationStep\":{\"expr\":{\"Literal\":{\"Value\":\"'after'\"}}},\"interpolationSmooth\":{\"expr\":{\"Literal\":{\"Value\":\"'cardinal'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Casos x Óbitos por Ano'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 382.67,
-          "width": 836.98,
-          "x": 22.67,
-          "y": 314.66,
-          "z": 3000.00
+          "config": "{\"name\":\"01067fb7b342feb3c39c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":807.3858267713509,\"y\":68.53543307086615,\"z\":8000,\"width\":208.62992125984252,\"height\":105.8267716535433}}],\"singleVisualGroup\":{\"displayName\":\"Grupo 4\",\"groupMode\":0}}",
+          "height": 105.83,
+          "width": 208.63,
+          "x": 807.39,
+          "y": 68.54,
+          "z": 8000.00
         },
         {
-          "config": "{\"name\":\"0358f38382cbb39d320a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":896.8261964735516,\"y\":314.6599496221662,\"z\":4000,\"width\":375.41561712846345,\"height\":382.67002518891684,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"fa_casoshumanos_1994-2025.UF Ajustada\",\"active\":true}],\"Size\":[{\"queryRef\":\"Medidas.Casos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fa_casoshumanos_1994-2025\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"UF Ajustada\"},\"Name\":\"fa_casoshumanos_1994-2025.UF Ajustada\",\"NativeReferenceName\":\"UF Ajustada\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.Casos\",\"NativeReferenceName\":\"Casos\"}]},\"queryOptions\":{\"allowOverlappingPointsSample\":false},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapStyles\":[{\"properties\":{\"showLabels\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'grayscale'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}}}],\"bubbles\":[{\"properties\":{\"bubbleSize\":{\"expr\":{\"Literal\":{\"Value\":\"-7L\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"heatMap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"mapControls\":[{\"properties\":{\"autoZoom\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showZoomButtons\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showLassoButton\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"geocodingCulture\":{\"expr\":{\"Literal\":{\"Value\":\"'pt-BR'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Casos por Estado'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"lockAspect\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "config": "{\"name\":\"01cb61a96219102f4dec\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16.125984251968504,\"y\":410.20472440944883,\"z\":0,\"width\":634.9606299212599,\"height\":292.2834645669291,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fa_casoshumanos_1994-2025.Ano Sintomas\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.Casos\"},{\"queryRef\":\"Medidas.Óbitos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fa_casoshumanos_1994-2025\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Ano Sintomas\"},\"Name\":\"fa_casoshumanos_1994-2025.Ano Sintomas\",\"NativeReferenceName\":\"Ano Sintomas\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.Casos\",\"NativeReferenceName\":\"Casos\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Óbitos\"},\"Name\":\"Medidas.Óbitos\",\"NativeReferenceName\":\"Óbitos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Scalar'\"}}},\"logAxisScale\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"invertAxis\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Medidas.TotalCasos\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Medidas.TotalObitos\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Medidas.Óbitos\"}}],\"lineStyles\":[{\"properties\":{\"strokeLineJoin\":{\"expr\":{\"Literal\":{\"Value\":\"'miter'\"}}},\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'smooth'\"}}},\"interpolationStep\":{\"expr\":{\"Literal\":{\"Value\":\"'after'\"}}},\"interpolationSmooth\":{\"expr\":{\"Literal\":{\"Value\":\"'monotoneX'\"}}},\"areaShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"lineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'solid'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Casos x Óbitos por Ano'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]}}}",
           "filters": "[]",
-          "height": 382.67,
-          "width": 375.42,
-          "x": 896.83,
-          "y": 314.66,
-          "z": 4000.00
+          "height": 292.28,
+          "width": 634.96,
+          "x": 16.13,
+          "y": 410.20,
+          "z": 0.00
         },
         {
-          "config": "{\"name\":\"5f5ba3bf38d31fc97b97\",\"layouts\":[{\"id\":0,\"position\":{\"x\":424.3828715365239,\"y\":115.16372795969772,\"z\":2000,\"width\":163.2241813602015,\"height\":108.816120906801,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Letalidade\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Letalidade\"},\"Name\":\"Medidas.Letalidade\",\"NativeReferenceName\":\"Letalidade\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Letalidade\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 108.82,
-          "width": 163.22,
-          "x": 424.38,
-          "y": 115.16,
-          "z": 2000.00
+          "config": "{\"name\":\"277870837c0998a0c616\",\"layouts\":[{\"id\":0,\"position\":{\"x\":309.338582677468,\"y\":69.54330708661418,\"z\":10000,\"width\":208.62992125984252,\"height\":105.8267716535433}}],\"singleVisualGroup\":{\"displayName\":\"Grupo 6\",\"groupMode\":0}}",
+          "height": 105.83,
+          "width": 208.63,
+          "x": 309.34,
+          "y": 69.54,
+          "z": 10000.00
         },
         {
-          "config": "{\"name\":\"982871090367be3ab19e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":596.6750629722922,\"y\":80.70528967254407,\"z\":4003,\"width\":343.6775818639798,\"height\":176.82619647355162,\"tabOrder\":4003}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Medidas.Casos\"}],\"Category\":[{\"queryRef\":\"fa_casoshumanos_1994-2025.Faixa Estária\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fa_casoshumanos_1994-2025\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.Casos\",\"NativeReferenceName\":\"Casos\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Faixa Estária\"},\"Name\":\"fa_casoshumanos_1994-2025.Faixa Estária\",\"NativeReferenceName\":\"Faixa Estária\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"35d926cec19353b16895\",\"layouts\":[{\"id\":0,\"position\":{\"height\":105.8267716535433,\"width\":208.62992125984252,\"x\":0,\"y\":0,\"z\":0}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"01067fb7b342feb3c39c\",\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
-          "height": 176.83,
-          "width": 343.68,
-          "x": 596.68,
-          "y": 80.71,
-          "z": 4003.00
+          "height": 105.83,
+          "width": 208.63,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
         },
         {
-          "config": "{\"name\":\"b9f8348822f17f8a9a8a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":963.9294710327455,\"y\":80.70528967254407,\"z\":4002,\"width\":301.0579345088161,\"height\":176.82619647355162,\"tabOrder\":4002}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Medidas.Casos\"}],\"Category\":[{\"queryRef\":\"fa_casoshumanos_1994-2025.Sexo\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fa_casoshumanos_1994-2025\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.Casos\",\"NativeReferenceName\":\"Casos\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Sexo\"},\"Name\":\"fa_casoshumanos_1994-2025.Sexo\",\"NativeReferenceName\":\"Sexo\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"3939b0c0cf86190ca8e0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":208.62992125984252,\"height\":105.8267716535433,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"773b64974117a8a5186f\",\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
-          "height": 176.83,
-          "width": 301.06,
-          "x": 963.93,
-          "y": 80.71,
-          "z": 4002.00
+          "height": 105.83,
+          "width": 208.63,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
         },
         {
-          "config": "{\"name\":\"ea67c8d5409b07c57473\",\"layouts\":[{\"id\":0,\"position\":{\"x\":215.81863979848865,\"y\":115.16372795969772,\"z\":1000,\"width\":153.24937027707807,\"height\":108.816120906801,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.TotalObitos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Óbitos\"},\"Name\":\"Medidas.TotalObitos\",\"NativeReferenceName\":\"Óbitos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Óbitos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"41d38fda0b89ed8d5934\",\"layouts\":[{\"id\":0,\"position\":{\"height\":42.330708661417326,\"width\":115.90551181102362,\"x\":0,\"y\":0,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Casos\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\",\"color\":\"#333333\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"e30acf8082d16aa1a242\"}",
           "filters": "[]",
-          "height": 108.82,
-          "width": 153.25,
-          "x": 215.82,
-          "y": 115.16,
+          "height": 42.33,
+          "width": 115.91,
+          "x": 0.00,
+          "y": 0.00,
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"fbd2d75cfe63fb9e2426\",\"layouts\":[{\"id\":0,\"position\":{\"x\":14.5088161209068,\"y\":115.16372795969772,\"z\":0,\"width\":183.17380352644835,\"height\":108.816120906801,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.TotalCasos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.TotalCasos\",\"NativeReferenceName\":\"Casos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"47ea60b940ccb00881d7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":37.79527559055123,\"y\":37.29133858267714,\"z\":3000,\"width\":30.236220472440944,\"height\":34.267716535433074,\"tabOrder\":15000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"fita-preta5953107837174954.png\"}}}}}]}},\"parentGroupName\":\"773b64974117a8a5186f\",\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
-          "height": 108.82,
-          "width": 183.17,
-          "x": 14.51,
-          "y": 115.16,
+          "height": 34.27,
+          "width": 30.24,
+          "x": 37.80,
+          "y": 37.29,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"5187daebbca6b9088fee\",\"layouts\":[{\"id\":0,\"position\":{\"x\":400.12598425196853,\"y\":5.039370078740157,\"z\":6000,\"width\":478.74015748031496,\"height\":42.330708661417326,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Febre Amarela no Brasil - 1994 a 2025\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"16pt\",\"color\":\"#333333\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 42.33,
+          "width": 478.74,
+          "x": 400.13,
+          "y": 5.04,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"5c81fe2c64f6240aa17c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16.125984251968504,\"y\":191.49606299212599,\"z\":7000,\"width\":634.9606299212599,\"height\":205.60629921259843,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fa_casoshumanos_1994-2025.Região\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.Casos\"},{\"queryRef\":\"Medidas.Óbitos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fa_casoshumanos_1994-2025\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Região\"},\"Name\":\"fa_casoshumanos_1994-2025.Região\",\"NativeReferenceName\":\"Região\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.Casos\",\"NativeReferenceName\":\"Casos\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Óbitos\"},\"Name\":\"Medidas.Óbitos\",\"NativeReferenceName\":\"Óbitos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}},\"showGradientLegend\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"enableValueDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}},{\"properties\":{\"enableValueDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"Medidas.Óbitos\"}}],\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"maxMarginFactor\":{\"expr\":{\"Literal\":{\"Value\":\"15L\"}}},\"preferredCategoryWidth\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}},\"italic\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Medidas.Óbitos\"}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"title\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 205.61,
+          "width": 634.96,
+          "x": 16.13,
+          "y": 191.50,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"6d7357512c1e7034e157\",\"layouts\":[{\"id\":0,\"position\":{\"height\":37.29133858267716,\"width\":67.5275590551181,\"x\":25.196850393700743,\"y\":29.228346456692904,\"z\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Casos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.Casos\",\"NativeReferenceName\":\"Casos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"preserveWhitespace\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Casos'\"}}}}}],\"spacing\":[{\"properties\":{\"customizeSpacing\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"spaceBelowTitle\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"subTitle\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"e30acf8082d16aa1a242\"}",
+          "filters": "[]",
+          "height": 37.29,
+          "width": 67.53,
+          "x": 25.20,
+          "y": 29.23,
           "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"75715525410e8b7739e2\",\"layouts\":[{\"id\":0,\"position\":{\"height\":28.22047244094488,\"width\":32.25196850393701,\"x\":29.22834645669286,\"y\":40.31496062992126,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"seringa8788400758447031.png\"}}}}}]}},\"parentGroupName\":\"01067fb7b342feb3c39c\",\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 28.22,
+          "width": 32.25,
+          "x": 29.23,
+          "y": 40.31,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"773b64974117a8a5186f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":558.3622047244095,\"y\":68.53543307086615,\"z\":9000,\"width\":208.62992125984252,\"height\":105.8267716535433}}],\"singleVisualGroup\":{\"displayName\":\"Grupo 5\",\"groupMode\":0}}",
+          "height": 105.83,
+          "width": 208.63,
+          "x": 558.36,
+          "y": 68.54,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"7b026190810c02722252\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":5000,\"width\":111.8740157480315,\"height\":52.40944881889764,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"logo-SUS1717922483880897.jpg\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 52.41,
+          "width": 111.87,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"82be95525da3d97315c5\",\"layouts\":[{\"id\":0,\"position\":{\"height\":66.51968503937007,\"width\":145.13385826771653,\"x\":32.25196850393695,\"y\":20.15748031496061,\"z\":14000}}],\"singleVisualGroup\":{\"displayName\":\"Grupo 3\",\"groupMode\":0},\"parentGroupName\":\"277870837c0998a0c616\"}",
+          "height": 66.52,
+          "width": 145.13,
+          "x": 32.25,
+          "y": 20.16,
+          "z": 14000.00
+        },
+        {
+          "config": "{\"name\":\"907bfc6a01e573084726\",\"layouts\":[{\"id\":0,\"position\":{\"height\":32.25196850393701,\"width\":34.267716535433074,\"x\":3.023622047244089,\"y\":3.023622047244089,\"z\":0}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"virus5943668906781703.png\"}}}}}],\"imageScaling\":[{\"properties\":{\"imageScalingType\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"d396f63a3a555f03f298\",\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 32.25,
+          "width": 34.27,
+          "x": 3.02,
+          "y": 3.02,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"982871090367be3ab19e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":976.6299212598425,\"y\":191.49606299212599,\"z\":2000,\"width\":286.23622047244095,\"height\":205.60629921259843,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Medidas.Casos\"}],\"Category\":[{\"queryRef\":\"fa_casoshumanos_1994-2025.Faixa Estária\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fa_casoshumanos_1994-2025\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.Casos\",\"NativeReferenceName\":\"Casos\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Faixa Estária\"},\"Name\":\"fa_casoshumanos_1994-2025.Faixa Estária\",\"NativeReferenceName\":\"Faixa Estária\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}}}}],\"labels\":[{\"properties\":{\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Percent of total'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"title\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 205.61,
+          "width": 286.24,
+          "x": 976.63,
+          "y": 191.50,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"990e7c9acac7548c340e\",\"layouts\":[{\"id\":0,\"position\":{\"height\":42.330708661417326,\"width\":115.90551181102362,\"x\":72.56692913385825,\"y\":20.157480314960637,\"z\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Letalidade\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\",\"color\":\"#333333\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"01067fb7b342feb3c39c\"}",
+          "filters": "[]",
+          "height": 42.33,
+          "width": 115.91,
+          "x": 72.57,
+          "y": 20.16,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"a36e4259dbecd1ac8c53\",\"layouts\":[{\"id\":0,\"position\":{\"x\":61.984251968504054,\"y\":20.15748031496061,\"z\":2000,\"width\":115.90551181102362,\"height\":42.330708661417326,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Óbitos\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\",\"color\":\"#333333\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"773b64974117a8a5186f\"}",
+          "filters": "[]",
+          "height": 42.33,
+          "width": 115.91,
+          "x": 61.98,
+          "y": 20.16,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"b9f8348822f17f8a9a8a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":676.2834645669292,\"y\":191.49606299212599,\"z\":1000,\"width\":286.23622047244095,\"height\":205.60629921259843,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Medidas.Casos\"}],\"Category\":[{\"queryRef\":\"fa_casoshumanos_1994-2025.Sexo\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fa_casoshumanos_1994-2025\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.Casos\",\"NativeReferenceName\":\"Casos\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Sexo\"},\"Name\":\"fa_casoshumanos_1994-2025.Sexo\",\"NativeReferenceName\":\"Sexo\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'outside'\"}}},\"labelStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'Percent of total'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}],\"title\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 205.61,
+          "width": 286.24,
+          "x": 676.28,
+          "y": 191.50,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"c2d5dd54c082c8f69102\",\"layouts\":[{\"id\":0,\"position\":{\"x\":32.75590551181108,\"y\":34.26771653543305,\"z\":4000,\"width\":39.30708661417323,\"height\":37.29133858267716,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"50D\"}}}},\"selector\":{\"id\":\"default\"}}]}},\"parentGroupName\":\"773b64974117a8a5186f\",\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 37.29,
+          "width": 39.31,
+          "x": 32.76,
+          "y": 34.27,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"ca16de6cf586e1620d3e\",\"layouts\":[{\"id\":0,\"position\":{\"height\":37.29133858267716,\"width\":39.30708661417323,\"x\":0,\"y\":0,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"50D\"}}}},\"selector\":{\"id\":\"default\"}}]}},\"parentGroupName\":\"d396f63a3a555f03f298\",\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 37.29,
+          "width": 39.31,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"cdb89e57ebcb09088770\",\"layouts\":[{\"id\":0,\"position\":{\"height\":105.8267716535433,\"width\":208.62992125984252,\"x\":0,\"y\":0,\"z\":13000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"277870837c0998a0c616\",\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 105.83,
+          "width": 208.63,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"d396f63a3a555f03f298\",\"layouts\":[{\"id\":0,\"position\":{\"height\":37.29133858267716,\"width\":39.30708661417323,\"x\":0,\"y\":14.110236220472444,\"z\":1000}}],\"singleVisualGroup\":{\"displayName\":\"Grupo 2\",\"groupMode\":0},\"parentGroupName\":\"82be95525da3d97315c5\"}",
+          "height": 37.29,
+          "width": 39.31,
+          "x": 0.00,
+          "y": 14.11,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"dbc199060dfa7b70273d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":4000,\"width\":1280,\"height\":52.40944881889764,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 52.41,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"e0bf486dc73a944d1e07\",\"layouts\":[{\"id\":0,\"position\":{\"x\":81.13385826771662,\"y\":46.36220472440942,\"z\":1000,\"width\":67.5275590551181,\"height\":37.29133858267716,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Óbitos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Óbitos\"},\"Name\":\"Medidas.Óbitos\",\"NativeReferenceName\":\"Óbitos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Óbitos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"preserveWhitespace\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Casos'\"}}}}}],\"spacing\":[{\"properties\":{\"customizeSpacing\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"spaceBelowTitle\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"subTitle\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"773b64974117a8a5186f\"}",
+          "filters": "[]",
+          "height": 37.29,
+          "width": 67.53,
+          "x": 81.13,
+          "y": 46.36,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e30acf8082d16aa1a242\",\"layouts\":[{\"id\":0,\"position\":{\"height\":66.51968503937007,\"width\":115.90551181102362,\"x\":29.22834645669292,\"y\":0,\"z\":0}}],\"singleVisualGroup\":{\"displayName\":\"Grupo 1\",\"groupMode\":0},\"parentGroupName\":\"82be95525da3d97315c5\"}",
+          "height": 66.52,
+          "width": 115.91,
+          "x": 29.23,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e6a16943f21041711da4\",\"layouts\":[{\"id\":0,\"position\":{\"height\":37.29133858267716,\"width\":67.5275590551181,\"x\":72.56692913385825,\"y\":49.385826771653555,\"z\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Letalidade\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Letalidade\"},\"Name\":\"Medidas.Letalidade\",\"NativeReferenceName\":\"Letalidade\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Letalidade\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"preserveWhitespace\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Casos'\"}}}}}],\"spacing\":[{\"properties\":{\"customizeSpacing\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"spaceBelowTitle\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"subTitle\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"parentGroupName\":\"01067fb7b342feb3c39c\"}",
+          "filters": "[]",
+          "height": 37.29,
+          "width": 67.53,
+          "x": 72.57,
+          "y": 49.39,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"eee0c1b84cb266d60004\",\"layouts\":[{\"id\":0,\"position\":{\"height\":37.29133858267716,\"width\":39.30708661417323,\"x\":25.196850393700743,\"y\":34.26771653543308,\"z\":2000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"50D\"}}}},\"selector\":{\"id\":\"default\"}}]}},\"parentGroupName\":\"01067fb7b342feb3c39c\",\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 37.29,
+          "width": 39.31,
+          "x": 25.20,
+          "y": 34.27,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"fd62fdf436041a607a94\",\"layouts\":[{\"id\":0,\"position\":{\"x\":676.2834645669292,\"y\":410.20472440944883,\"z\":3000,\"width\":586.5826771653543,\"height\":292.2834645669291,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fa_casoshumanos_1994-2025.UF\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.Casos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fa_casoshumanos_1994-2025\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"UF\"},\"Name\":\"fa_casoshumanos_1994-2025.UF\",\"NativeReferenceName\":\"UF\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"},\"Name\":\"Medidas.Casos\",\"NativeReferenceName\":\"Casos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Casos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"legend\":[{\"properties\":{\"showGradientLegend\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 292.28,
+          "width": 586.58,
+          "x": 676.28,
+          "y": 410.20,
+          "z": 3000.00
         }
       ],
       "width": 1280.00
     }
-  ]
+  ],
+  "theme": "Storm"
 }
