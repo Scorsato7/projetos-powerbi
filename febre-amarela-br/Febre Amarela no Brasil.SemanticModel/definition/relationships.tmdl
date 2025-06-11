@@ -1,5 +1,0 @@
-relationship b5b87d96-66cd-496c-b0c0-175c9531c0a6
-	joinOnDateBehavior: datePartOnly
-	fromColumn: fa_casoshumanos_1994-2025.'Data Óbito'
-	toColumn: LocalDateTable_4a5b3025-b8ba-4b5b-b944-4fc7ebf1b3ae.Date
-
