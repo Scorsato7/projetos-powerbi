@@ -1,7 +1,8 @@
 # 📈 Projetos Power BI
 Portfólio de projetos desenvolvidos em Power BI.
 
-## Recursos Humanos
+## [Recursos Humanos](https://github.com/Scorsato7/analise-rh)
+![Dashboard de Recursos Humanos](https://imgur.com/TCAjKxL.png)
 
 ## [Olist - Ecommerce](https://github.com/Scorsato7/olist-ecommerce)
 ![Dashboard de Vendas](https://imgur.com/ATBelbl.png)
